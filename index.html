@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Now | For Outdoor Enthusiasts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-mountain-sun"></i> Weather Now</h1>
+            <p>Quick weather checks for outdoor enthusiasts</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." value="London">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <div class="error-message" id="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="error-text">Unable to fetch weather data. Please try again.</p>
+        </div>
+        
+        <div class="weather-info" id="weather-info">
+            <h2 class="location" id="location">London, United Kingdom</h2>
+            <p class="date" id="date">Monday, June 12, 2023</p>
+            
+            <div class="temperature" id="temperature">
+                18<span>°C</span>
+            </div>
+            
+            <div class="weather-description">
+                <i class="fas fa-cloud weather-icon" id="weather-icon"></i>
+                <span id="weather-description">Partly Cloudy</span>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-card">
+                    <i class="fas fa-wind"></i>
+                    <div class="detail-value" id="wind-speed">12 km/h</div>
+                    <div class="detail-label">Wind Speed</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tint"></i>
+                    <div class="detail-value" id="humidity">65%</div>
+                    <div class="detail-label">Humidity</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-temperature-low"></i>
+                    <div class="detail-value" id="feels-like">17°C</div>
+                    <div class="detail-label">Feels Like</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-eye"></i>
+                    <div class="detail-value" id="visibility">10 km</div>
+                    <div class="detail-label">Visibility</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by Open-Meteo API | Designed for Outdoor Enthusiasts</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
